@@ -12,10 +12,22 @@ public class Chromebook extends Item{
 	}
 	
 	public String toString(){
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+		=======
 		// Write your codes here
 		String output = super.toString();
 		output = String.format("%-63s %-20d", output, os);
 		
+=======
+		output += String.format("%-63s %-20s", output, os);
+=======
+		String output = super.toString();
+		output += String.format("%-20s\n", os);
+		
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 		return output;
 	}
 }

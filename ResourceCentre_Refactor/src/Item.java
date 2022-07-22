@@ -11,16 +11,29 @@ public class Item {
 		this.dueDate = "";
 		this.isAvailable = true;
 	}
+
 	public String toString() {
-		
+		String iteminfo = String.format("%-10s %-30s %-10s %-10s ", assetTag , description, showAvailability(isAvailable), dueDate);
+
 		// Write your codes here
+<<<<<<< HEAD
 		String itemInfo = String.format("%-10s %-30s %-10s %-10s", 
 				assetTag,
 				description, 
 				showAvailability(isAvailable),
 				dueDate);
 		return null;
+=======
+<<<<<<< HEAD
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s",
+				assetTag,
+				description, 
+				showAvailability(isAvailable),
+				dueDate);
+		return itemInfo;
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 	}
+<<<<<<< HEAD
 	
 	public String showAvailability(boolean isAvailable) {
 		String avail;
@@ -32,6 +45,33 @@ public class Item {
 		}
 		return avail;
 	}
+=======
+	public String showAvailability(boolean isAvailable) {
+		String avail;
+
+		if (isAvailable == true) {
+			avail = "Yes";
+		} else {
+			avail = "No";
+		}
+		return avail;
+=======
+		return iteminfo;
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
+	}
+	
+	public String showAvailability(boolean isAvailable) {
+		String avail;
+
+		if (isAvailable == true) {
+			avail = "Yes";
+		} else {
+			avail = "No";
+		}
+		return avail;
+}
+
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 	public String getAssetTag() {
 		return assetTag;
 	}
@@ -56,4 +96,3 @@ public class Item {
 		this.isAvailable = isAvailable;
 	}
 }
-

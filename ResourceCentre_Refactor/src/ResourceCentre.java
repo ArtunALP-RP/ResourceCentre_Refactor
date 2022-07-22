@@ -2,11 +2,38 @@ import java.util.ArrayList;
 
 public class ResourceCentre {
 
+	private static final int OPTION_OUT = 5;
+	private static final int OPTION_VIEW = 1;
+	private static final int OPTION_ADD = 2;
+	private static final int OPTION_LOAN = 3;
+	private static final int OPTION_RETURN = 4;
+	
 
+<<<<<<< HEAD
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
 	private static final int OPTION_VIEW = 1;
+=======
+	/**
+	 * 
+	 */
+	private static final int OPTION_RETURN = 4;
+	/**
+	 * 
+	 */
+	private static final int OPTION_LOAN = 3;
+	/**
+	 * 
+	 */
+	private static final int OPTION_ADD = 2;
+	/**
+	 * 
+	 */
+	private static final int OPTION_VIEW = 1;
+	/**
+	 * 
+	 */
 	private static final int OPTION_QUIT = 5;
 	public static void main(String[] args) {
 
@@ -20,7 +47,15 @@ public class ResourceCentre {
 
 		int option = 0;
 
+<<<<<<< HEAD
 		while (option != OPTION_QUIT) {
+=======
+<<<<<<< HEAD
+		while (option != OPTION_QUIT) {
+=======
+		while (option != OPTION_OUT) {
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 
 			ResourceCentre.menu();
 			option = Helper.readInt("Enter an option > ");
@@ -96,7 +131,18 @@ public class ResourceCentre {
 
 	}
 
+<<<<<<< HEAD
 	public static void itemTypeMenu() {
+=======
+<<<<<<< HEAD
+	/**
+	 * 
+	 */
+	public static void itemTypeMenu() {
+=======
+	private static void itemTypeMenu() {
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
 		System.out.println("2. Chromebook");
@@ -134,12 +180,21 @@ public class ResourceCentre {
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
 
+<<<<<<< HEAD
 		for (int i = 0; i < camcorderList.size(); i++) {
 
 			output += String.format("%-84s \n", camcorderList.get(i).toString());
+<<<<<<< HEAD
+=======
+=======
+		for(Camcorder i : camcorderList){
+			output += i.toString();
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 		}
 		return output;
 	}
+
 	public static void viewAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.setHeader("CAMCORDER LIST");
 		String output = String.format("%-10s %-30s %-10s %-10s %-20s\n", "ASSET TAG", "DESCRIPTION",
@@ -151,12 +206,20 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+<<<<<<< HEAD
 		for (int i = 0; i < chromebookList.size(); i++) {
 
 			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).toString());
+=======
+		for(Chromebook i : chromebookList){
+			output += i.toString();
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 		}
+		
+
 		return output;
 	}
+
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 		
 		ResourceCentre.setHeader("CHROMEBOOK LIST");
@@ -237,7 +300,8 @@ public class ResourceCentre {
 
 		for (int i = 0; i < chromebookList.size(); i++) {
 
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
+			String assetTag = chromebookList.get(i).getAssetTag();
+			if (tag.equalsIgnoreCase(assetTag)
 					
 					&& chromebookList.get(i).getIsAvailable() == true) {
 				
@@ -269,11 +333,22 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < camcorderList.size(); i++) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 			String assetTag = camcorderList.get(i).getAssetTag();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& camcorderList.get(i).getIsAvailable() == false) {
 				camcorderList.get(i).setIsAvailable(true);
 				camcorderList.get(i).setDueDate("");
+=======
+			Camcorder assetTag = camcorderList.get(i);
+			if (tag.equalsIgnoreCase(assetTag.getAssetTag())
+					&& assetTag.getIsAvailable() == false) {
+				assetTag.setIsAvailable(true);
+				assetTag.setDueDate("");
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 				isReturned = true;
 				
 			}
@@ -298,11 +373,22 @@ public class ResourceCentre {
 		boolean isReturned = false;
 
 		for (int i = 0; i < chromebookList.size(); i++) {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 			String assetTag = chromebookList.get(i).getAssetTag();
 			if (tag.equalsIgnoreCase(assetTag)
 					&& chromebookList.get(i).getIsAvailable() == false) {
 				chromebookList.get(i).setIsAvailable(true);
 				chromebookList.get(i).setDueDate("");
+=======
+			Chromebook assetTag = chromebookList.get(i);
+			if (tag.equalsIgnoreCase(assetTag.getAssetTag())
+					&& assetTag.getIsAvailable() == false) {
+				assetTag.setIsAvailable(true);
+				assetTag.setDueDate("");
+>>>>>>> branch 'master' of https://github.com/ArtunALP-RP/ResourceCentre_Refactor.git
 				isReturned = true;
 				
 			}
